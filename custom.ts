@@ -13,9 +13,15 @@ namespace Extras {
 }
     //% block="avg $value"
     export function avg(value: number[]) {
-let temporaryValue = 0
-for (let value2 of value){
-temporaryValue += value2
-}
+        let temporaryValue = 0
+        for (let value2 of value){
+            temporaryValue += value2
+    }
 return (temporaryValue / value.length)
-    }}
+}
+    //%block="negative $value"
+    export function neg(value: number){
+        return (0 - value)
+}
+}
+    
