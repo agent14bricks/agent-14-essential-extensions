@@ -12,6 +12,11 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/agent14bricks/agent-14-essential-extensions** and import
 
+## What this does
+Creates various different blocks. See the full list bellow:
+* Average of numbers
+* Array of All Sprites
+
 ## Edit this project ![Build status badge](https://github.com/agent14bricks/agent-14-essential-extensions/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
