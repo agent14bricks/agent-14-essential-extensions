@@ -32,7 +32,7 @@ To edit this repository in MakeCode.
 This image shows the blocks code from the last commit in master.
 This image may take a few minutes to refresh.
 
-![A rendered view of the blocks](https://raw.githubusercontent.com/agent14bricks/agent-14-essential-extensions/master/blocks.png)
+![A rendered view of the blocks](https://raw.githubusercontent.com/agent14bricks/agent-14-essential-extensions/master/blocks.jpg)
 
 #### Metadata (used for search, rendering)
 
