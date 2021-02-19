@@ -23,5 +23,19 @@ return (temporaryValue / value.length)
     export function neg(value: number){
         return (0 - value)
 }
+    //% blockId=doesKindExists block="does sprite kind $kind exists"
+    //% kind.shadow="spritekind"
+    //% group="SpriteKind"
+    export function doesKindExists(kind: number): boolean {
+        let temporaryVar = 0
+        for(let value of Extras.arrayOfAllSprites()){
+            temporaryVar += 1 
+        }
+        if(temporaryVar > 0){
+            return true
+        }else{
+            return false
+        }
+    }
 }
     
