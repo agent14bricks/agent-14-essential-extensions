@@ -17,6 +17,7 @@ Creates various different blocks. See the full list bellow:
 * Average of numbers
 * Array of All Sprites
 * Negative Value
+* Does sprite kind exist
 
 ## Edit this project ![Build status badge](https://github.com/agent14bricks/agent-14-essential-extensions/workflows/MakeCode/badge.svg)
 
