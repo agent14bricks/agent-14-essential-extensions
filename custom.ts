@@ -1,6 +1,7 @@
 //% color="#ff0000"
 namespace Extras {
     //% block
+    //% group="SpriteKind"
     export function arrayOfAllSprites() {
     const allSprites: Sprite[] = [];
 
@@ -12,6 +13,7 @@ namespace Extras {
     return allSprites;
 }
     //% block="avg $value"
+    //% group="Math"
     export function avg(value: number[]) {
         let temporaryValue = 0
         for (let value2 of value){
@@ -20,6 +22,7 @@ namespace Extras {
 return (temporaryValue / value.length)
 }
     //%block="negative $value"
+    //% group="Math"
     export function neg(value: number){
         return (0 - value)
 }
