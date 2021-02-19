@@ -12,6 +12,22 @@ namespace Extras {
     }
     return allSprites;
 }
+    //% block="array of all sprites except $kind"
+    //% kind.shadow="SpriteKind"
+    //% group="SpriteKind"
+    export function arrayOfAllSpritesExept(kind: number) {
+    const allSprites: Sprite[] = [];
+
+    for (const key of Object.keys(game.currentScene().spritesByKind)) {
+        for (const sprite of game.currentScene().spritesByKind[parseInt(key)].sprites()) {
+            allSprites.push(sprite);
+        }
+    }
+    for (let value of sprites.allOfKind(kind)){
+        allSprites.removeAt(allSprites.indexOf(value))
+    }
+    return allSprites;
+}
     //% block="avg $value"
     //% group="Math"
     export function avg(value: number[]) {
