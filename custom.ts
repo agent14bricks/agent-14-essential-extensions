@@ -1,4 +1,4 @@
-//% color="#ff0000"
+//% color="#ff0000" icon="/f055"
 namespace Extras {
     //% block
     //% group="SpriteKind"
@@ -47,14 +47,71 @@ return (temporaryValue / value.length)
     //% group="SpriteKind"
     export function doesKindExists(kind: number): boolean {
         let temporaryVar = 0
-        for(let value of Extras.arrayOfAllSprites()){
+        for(let value of sprites.allOfKind(kind)){
             temporaryVar += 1 
         }
         if(temporaryVar > 0){
             return true
-        }else{
+        } else {
             return false
         }
     }
+    //% block="flicker image $image"
+    //% image.shadow="image"
+    //% group="Images"
+    export function flickerImage(image: Image) {
+        let exampleArray = [image, img`
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . .
+        `]
+        return exampleArray
+    }
+     //% block="flicker animation array $image"
+    //% image.shadow="Image[]"
+    //% group="Images"
+    export function flickerAnimation(image: Image[]){
+        let frameFlicker = true
+        let valueCount = 0
+        const exampleArray: Image[] = [];
+        for(let value of image) {
+            if (frameFlicker){
+                exampleArray.push(exampleArray[valueCount])
+            } else {
+                exampleArray.push(img`
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                    . . . . . . . . . . . . . . . .
+                `)
+            }
+        valueCount += 1
+        }
+        return exampleArray
+    }
 }
-    
